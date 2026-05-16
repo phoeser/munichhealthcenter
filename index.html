@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Munich Health Center – Biohacking Companion App. Therapien, Supplement-Wissen, Symptom-Assistent und aktuelle Longevity-News in einer App." />
+  <meta name="theme-color" content="#1e6b7c" />
+  <title>Munich Health Center – Biohacking App</title>
+
+  <!-- PWA / Home-Screen-Icon -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png" />
+  <link rel="shortcut icon" href="icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="MHC" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Hintergrund-Effekte -->
+  <div class="bg-effects" aria-hidden="true">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Startseite" data-nav="home">
+        <span class="logo-mark">
+          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2f8b6a"/>
+                <stop offset="100%" stop-color="#4a7a8a"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#lg)" d="M16 2c3 4 7 6 7 12 0 5-3 8-7 8s-7-3-7-8c0-6 4-8 7-12zm0 22c4.5 0 8-3.5 8-8h2c0 5.5-4.5 10-10 10S6 21.5 6 16h2c0 4.5 3.5 8 8 8z"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <strong>Munich Health Center</strong>
+          <em>Biohacking Companion</em>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#therapie" data-nav="therapie">Therapien</a>
+        <a href="#supplement" data-nav="supplement">Supplements</a>
+        <a href="#symptom" data-nav="symptom">Symptom</a>
+        <a href="#news" data-nav="news">News</a>
+        <a href="#about" data-nav="about">Über</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HOME ============ -->
+    <section class="view" id="view-home" data-view="home">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Munich Health Center – Elevate your Health
+          </div>
+          <h1 class="hero-title">Therapien & <span class="gradient-text">Biohacking</span> aus einer Hand</h1>
+          <p class="hero-lead">Ergänzendes Wissen rund um die Behandlungen im Munich Health Center: Supplement-Datenbank, Symptom-Assistent und aktuelle Longevity-News – Hand in Hand mit unseren modernen Verfahren vor Ort.</p>
+        </div>
+
+        <div class="main-actions">
+          <a href="#supplement" class="action-btn" data-nav="supplement">
+            <div class="action-btn-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.5 3.5a4.95 4.95 0 0 1 7 7l-7 7a4.95 4.95 0 0 1-7-7z"/>
+                <path d="M7 7l10 10"/>
+              </svg>
+            </div>
+            <div class="action-btn-body">
+              <h2>Supplement-Check</h2>
+              <p>Nutzen, Dosis, Einnahme & Risiken für jedes Supplement – lokal oder per KI.</p>
+            </div>
+            <span class="action-btn-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="#symptom" class="action-btn action-btn--alt" data-nav="symptom">
+            <div class="action-btn-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 12h-3l-2 6-4-12-2 6H4"/>
+              </svg>
+            </div>
+            <div class="action-btn-body">
+              <h2>Symptom-Suche</h2>
+              <p>Wähle dein Anliegen aus – und bekomme passende Supplements + Biohacking-Tipps.</p>
+            </div>
+            <span class="action-btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="news-preview">
+          <div class="news-preview-head">
+            <div>
+              <span class="eyebrow">Frisch aus der Szene</span>
+              <h3>Aktuelle Longevity- & Biohacking-News</h3>
+            </div>
+            <a href="#news" class="news-preview-all" data-nav="news">Alle News →</a>
+          </div>
+          <div id="home-news-status" class="home-news-status"></div>
+          <div id="home-news-list" class="home-news-grid"></div>
+        </div>
+
+        <div class="hero-stats" id="hero-stats">
+          <div class="stat"><strong id="stat-supplements">–</strong><span>Supplements in DB</span></div>
+          <div class="stat"><strong id="stat-tips">–</strong><span>Biohacking-Tipps</span></div>
+          <div class="stat"><strong id="stat-goals">–</strong><span>Symptom-Gruppen</span></div>
+        </div>
+
+        <!-- MHC Highlight-Box statt Wearables -->
+        <div class="home-mhc card">
+          <div class="home-mhc-content">
+            <span class="eyebrow">Vor Ort verfügbar</span>
+            <h3>21 Therapien im Munich Health Center</h3>
+            <p>Hypoxietraining, eSpineBot, Infrarot-A, Hyperthermie und mehr – ergänzt durch externes Verfahren INUSpherese® zur Blut-Apherese.</p>
+            <a href="#therapie" class="btn btn-primary" data-nav="therapie">Alle Therapien ansehen →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUPPLEMENT-CHECK ============ -->
+    <section class="view hidden" id="view-supplement" data-view="supplement">
+      <div class="container">
+        <div class="view-head">
+          <a href="#home" class="back-link" data-nav="home">← Zurück zur Startseite</a>
+          <span class="eyebrow">Kategorie 1</span>
+          <h2>Supplement-Check</h2>
+          <p>Suche ein Supplement. Ist es in der Datenbank – zeigt die App direkt alle Details. Ist es nicht dabei, fragt die KI nach und liefert eine strukturierte Antwort.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="input-wrap">
+            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input id="supplement-search" type="text" placeholder="Suchen… z. B. Kreatin, Magnesium, Vitamin C, Ashwagandha" autocomplete="off" list="supplement-datalist" />
+            <datalist id="supplement-datalist"></datalist>
+          </div>
+          <div class="category-filters" id="category-filters"></div>
+        </div>
+
+        <div id="supplement-detail" class="supplement-detail hidden"></div>
+        <div id="supplement-ai" class="supplement-ai hidden"></div>
+
+        <div class="supplement-list-head">
+          <h3 id="supplement-list-title">Alle Supplements</h3>
+          <span class="supplement-list-count" id="supplement-list-count"></span>
+        </div>
+        <div id="supplement-grid" class="supplement-grid"></div>
+        <div id="supplement-no-results" class="no-results hidden">
+          <p>Kein Treffer in der Datenbank.</p>
+          <button class="btn btn-primary" id="supplement-ask-ai">🤖 KI fragen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SYMPTOM ============ -->
+    <section class="view hidden" id="view-symptom" data-view="symptom">
+      <div class="container">
+        <div class="view-head">
+          <a href="#home" class="back-link" data-nav="home">← Zurück zur Startseite</a>
+          <span class="eyebrow">Kategorie 2</span>
+          <h2>Symptom beschreiben</h2>
+          <p>Was belastet dich? Beschreib es in eigenen Worten – die App kombiniert lokale Empfehlungen (Supplements & Biohacking-Tipps aus der DB) mit einer strukturierten KI-Antwort.</p>
+        </div>
+
+        <div class="recommender">
+          <div class="recommender-input">
+            <label for="symptom-select" class="visually-hidden">Dein Symptom oder Ziel</label>
+            <div class="input-wrap">
+              <svg class="input-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+              <select id="symptom-select" aria-label="Symptom auswählen">
+                <option value="">– Symptom oder Ziel wählen –</option>
+              </select>
+            </div>
+            <button id="symptom-btn" class="btn btn-primary">Empfehlung starten</button>
+          </div>
+
+          <p class="symptom-hint small">Wähle aus der Liste. Die App kombiniert lokale Empfehlungen aus der Datenbank mit einer KI-Einschätzung.</p>
+
+          <div id="symptom-results" class="recommendation-results" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWS ============ -->
+    <section class="view hidden" id="view-news" data-view="news">
+      <div class="container">
+        <div class="view-head">
+          <a href="#home" class="back-link" data-nav="home">← Zurück zur Startseite</a>
+          <span class="eyebrow">Kategorie 3</span>
+          <h2>Biohacking- & Longevity-News</h2>
+          <p>Aktuelle Themen aus Forschung, Supplementen, Ernährung, Tech & Longevity. KI-kuratiert beim Öffnen der Seite.</p>
+        </div>
+
+        <div class="news-controls">
+          <div class="chips-bar" id="news-topic-chips">
+            <button class="chip chip--active" data-topic="all">Alles</button>
+            <button class="chip" data-topic="longevity">Longevity</button>
+            <button class="chip" data-topic="supplements">Supplements</button>
+            <button class="chip" data-topic="ernaehrung">Ernährung & Fasten</button>
+            <button class="chip" data-topic="bewegung">Bewegung & Schlaf</button>
+            <button class="chip" data-topic="tech">Tech & Wearables</button>
+          </div>
+          <button class="btn btn-ghost" id="news-refresh">🔄 Aktualisieren</button>
+        </div>
+
+        <div id="news-status" class="news-status"></div>
+        <div id="news-list" class="news-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ THERAPIEN ============ -->
+    <section class="view hidden" id="view-therapie" data-view="therapie">
+      <div class="container">
+        <div class="view-head">
+          <a href="#home" class="back-link" data-nav="home">← Zurück zur Startseite</a>
+          <span class="eyebrow">Behandlungen & Verfahren im MHC</span>
+          <h2>Therapien & moderne Gesundheitsverfahren</h2>
+          <p>Übersicht der Leistungen im Munich Health Center, ergänzt um die externe Blutwäsche-Therapie INUSpherese®. <a href="https://bookeo.com/munichhealthcenter" target="_blank" rel="noopener">Termin online buchen →</a></p>
+        </div>
+
+        <div class="therapie-controls">
+          <div class="chips-bar" id="therapie-chips" role="tablist"></div>
+        </div>
+
+        <div id="therapie-grid" class="therapie-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="view hidden" id="view-about" data-view="about">
+      <div class="container">
+        <div class="view-head">
+          <a href="#home" class="back-link" data-nav="home">← Zurück zur Startseite</a>
+          <span class="eyebrow">Info</span>
+          <h2>Über diese App</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>🚀 Projekt</h3>
+            <p><strong>Biohacking Supplement Check</strong> ist eine schlanke Web-App, die drei Kernbedürfnisse erfüllt: fundierte Infos zu einzelnen Supplements, Empfehlungen bei konkreten Symptomen, und einen Überblick über aktuelle Biohacking- & Longevity-News.</p>
+            <p>Die App läuft im Browser, nutzt eine kuratierte Supplement-Datenbank und Google Gemini für KI-Antworten und Web-Recherche – der API-Key ist zentral hinterlegt, du musst nichts konfigurieren.</p>
+          </div>
+
+          <div class="about-card about-card--warning">
+            <h3>⚕️ Haftungsausschluss</h3>
+            <p>Diese App liefert <strong>keinen medizinischen Rat</strong> und ersetzt keine ärztliche Diagnose oder Therapie. Konsultiere bei akuten Beschwerden, bestehender Medikation, chronischen Erkrankungen, Schwangerschaft oder vor größeren Lifestyle-Änderungen eine qualifizierte Fachperson (Arzt/Ärztin, Heilpraktiker:in, Ernährungsfachkraft).</p>
+            <p>Alle Angaben dienen ausschließlich der allgemeinen Information und Bildung. Die Nutzung erfolgt auf eigene Verantwortung.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>💬 Kontakt & Feedback</h3>
+            <p>Feedback, Wünsche oder Fehler? Schreib mir direkt:</p>
+            <p><a class="btn btn-ghost" href="mailto:phoeser@web.de?subject=Biohacking%20Supplement%20Check%20%E2%80%93%20Feedback">phoeser@web.de</a></p>
+            <p class="small">Oder via GitHub Issue: <a href="https://github.com/phoeser/Biohacking/issues" target="_blank" rel="noopener">github.com/phoeser/Biohacking/issues</a></p>
+          </div>
+
+          <div class="about-card">
+            <h3>📄 Impressum</h3>
+            <p>
+              Angaben gemäß § 5 TMG:<br>
+              Paul Höser<br>
+              E-Mail: <a href="mailto:phoeser@web.de">phoeser@web.de</a>
+            </p>
+            <p class="small">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Paul Höser. Private, nicht-kommerzielle Informations-Seite.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>🔐 Datenschutz</h3>
+            <p>Die App speichert <strong>keine persönlichen Daten</strong>. Keine Cookies, kein Tracking, kein Analytics. Lokal im Browser wird lediglich ein kurzer News-Cache (30 Min) abgelegt, damit die News-Seite nicht bei jedem Öffnen neu geladen werden muss.</p>
+            <p class="small">Wenn du KI-Funktionen nutzt (Symptom-Einschätzung, neue Supplements, News), wird dein eingegebener Text an die Gemini-API von Google übertragen. Der API-Key ist zentral von der App hinterlegt – du musst nichts konfigurieren.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Supplement-Detail Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Schließen">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="mhc-footer-grid">
+        <div>
+          <strong>Munich Health Center GmbH</strong><br>
+          Marktstraße 8 · 80802 München<br>
+          T: <a href="tel:+498994473938">+49 (0)89 – 94 47 39 38</a><br>
+          <a href="mailto:info@munichhealthcenter.de">info@munichhealthcenter.de</a><br>
+          <a href="https://munichhealthcenter.de" target="_blank" rel="noopener">munichhealthcenter.de</a>
+        </div>
+        <div>
+          <strong>Links</strong><br>
+          <a href="https://bookeo.com/munichhealthcenter" target="_blank" rel="noopener">Termin buchen</a><br>
+          <a href="https://munichhealthcenter.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a><br>
+          <a href="https://munichhealthcenter.de/impressum/" target="_blank" rel="noopener">Impressum</a><br>
+          <a href="#about" data-nav="about">Über diese App</a>
+        </div>
+      </div>
+      <p class="footer-small">
+        ⚕️ Diese App ergänzt die Beratungen im Munich Health Center mit allgemeinem Wissen. Keine Heilversprechen. Kein Ersatz für ärztliche Beratung.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Daten und App-Logik -->
+  <script src="js/data/supplements.js"></script>
+  <script src="js/data/tips.js"></script>
+  <script src="js/data/goals.js"></script>
+  <script src="js/data/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
