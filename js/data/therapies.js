@@ -21,6 +21,7 @@ const THERAPIES = [
       'Stärkt die Stressresistenz'
     ],
     indication: ['Erschöpfung', 'Long Covid', 'Sport-Regeneration', 'Anti-Aging'],
+    tags: ['energie', 'mitochondrien', 'erschoepfung', 'longevity', 'regeneration', 'anti-aging', 'long-covid', 'sport', 'sauerstoff'],
     link: 'https://munichhealthcenter.de/leistungen/hypoxietraining/'
   },
   {
@@ -36,6 +37,7 @@ const THERAPIES = [
       'Verlaufskontrolle therapeutischer Maßnahmen'
     ],
     indication: ['Stress', 'Burnout', 'Schlafprobleme', 'Sport-Performance'],
+    tags: ['stress', 'burnout', 'schlaf', 'nervensystem', 'diagnostik', 'sport', 'erholung', 'herzfrequenz'],
     link: 'https://munichhealthcenter.de/leistungen/vns-analyse/'
   },
   {
@@ -51,6 +53,7 @@ const THERAPIES = [
       'Sehr verträglich ohne UV-Belastung'
     ],
     indication: ['Schmerzen', 'Wundheilung', 'Regeneration', 'Verspannungen'],
+    tags: ['schmerzen', 'wundheilung', 'regeneration', 'entzuendung', 'verspannung', 'durchblutung', 'haut'],
     link: 'https://munichhealthcenter.de/leistungen/infrarot-a/'
   },
   {
@@ -66,6 +69,7 @@ const THERAPIES = [
       'Wirkt schnell, oft schon nach 1–3 Anwendungen'
     ],
     indication: ['Rückenschmerzen', 'Migräne', 'Chronische Schmerzen', 'Verspannungen'],
+    tags: ['schmerzen', 'ruecken', 'migraene', 'nervensystem', 'verspannung', 'chronisch'],
     link: 'https://munichhealthcenter.de/leistungen/bioadaptive-impulsanwendung/'
   },
   {
@@ -81,6 +85,7 @@ const THERAPIES = [
       'Sanft, ohne manuelle Manipulation'
     ],
     indication: ['Rückenschmerzen', 'Bandscheibenprobleme', 'Wirbelsäule', 'Haltungsschäden'],
+    tags: ['ruecken', 'wirbelsaeule', 'bandscheibe', 'haltung', 'regeneration', 'dekompression'],
     link: 'https://munichhealthcenter.de/leistungen/espinebot/'
   },
   {
@@ -96,6 +101,7 @@ const THERAPIES = [
       'Begleitend bei chronischen Beschwerden'
     ],
     indication: ['Chronische Infekte', 'Detox', 'Immunsystem', 'Onkologie-Begleitung'],
+    tags: ['immunsystem', 'detox', 'infekte', 'entzuendung', 'fieber', 'onkologie'],
     link: 'https://munichhealthcenter.de/leistungen/ganzkoerperhyperthermie/'
   },
   {
@@ -111,6 +117,7 @@ const THERAPIES = [
       'Reishi, Cordyceps, Löwenmähne, Chaga u.a.'
     ],
     indication: ['Immunsystem', 'Energie', 'Fokus', 'Schlaf'],
+    tags: ['immunsystem', 'energie', 'fokus', 'schlaf', 'adaptogene', 'nahrungsergaenzung'],
     link: 'https://munichhealthcenter.de/leistungen/vitalpilze-und-nahrungsergaenzungsmittel/'
   },
   {
@@ -126,6 +133,7 @@ const THERAPIES = [
       'Niedrigschwelliger Einstieg'
     ],
     indication: ['Erstcheck', 'Prävention', 'Verlaufskontrolle'],
+    tags: ['diagnostik', 'praevention', 'blutbild', 'check-up', 'biomarker'],
     link: 'https://munichhealthcenter.de/leistungen/screenings/'
   },
 
@@ -143,6 +151,7 @@ const THERAPIES = [
       'Personalisierte Gesundheitsstrategie'
     ],
     indication: ['Prävention', 'Anti-Aging', 'Familiäre Risiken', 'Longevity'],
+    tags: ['praevention', 'anti-aging', 'longevity', 'genetik', 'epigenetik', 'personalisiert'],
     link: 'https://munichhealthcenter.de/leistungen/praevention-epigenetik-genetik/'
   },
   {
@@ -158,6 +167,7 @@ const THERAPIES = [
       'Begleitung über mehrere Wochen'
     ],
     indication: ['Fatigue', 'Atemnot', 'Brain Fog', 'Belastungsintoleranz'],
+    tags: ['long-covid', 'fatigue', 'erschoepfung', 'brain-fog', 'atemnot', 'post-vac'],
     link: 'https://munichhealthcenter.de/leistungen/long-covid-postvirale-belastungszustaende/'
   },
   {
@@ -173,6 +183,7 @@ const THERAPIES = [
       'Reduziert Medikamentenbedarf'
     ],
     indication: ['Rückenschmerzen', 'Fibromyalgie', 'Migräne', 'Gelenkschmerzen'],
+    tags: ['schmerzen', 'ruecken', 'migraene', 'fibromyalgie', 'gelenke', 'chronisch'],
     link: 'https://munichhealthcenter.de/leistungen/chronische-schmerzen/'
   },
   {
@@ -188,6 +199,7 @@ const THERAPIES = [
       'Langfristige Begleitung'
     ],
     indication: ['Hashimoto', 'Rheuma', 'Insulinresistenz', 'Übergewicht', 'Allergien'],
+    tags: ['autoimmun', 'hashimoto', 'rheuma', 'stoffwechsel', 'insulin', 'allergie', 'uebergewicht'],
     link: 'https://munichhealthcenter.de/leistungen/stoffwechsel-und-autoimmunprozesse/'
   },
   {
@@ -203,6 +215,7 @@ const THERAPIES = [
       'Nachhaltige Beweglichkeit'
     ],
     indication: ['Rücken', 'Nacken', 'Bandscheiben', 'Haltung'],
+    tags: ['ruecken', 'nacken', 'bandscheibe', 'haltung', 'wirbelsaeule', 'beweglichkeit'],
     link: 'https://munichhealthcenter.de/leistungen/wirbelsaeulenregeneration/'
   },
   {
@@ -218,6 +231,7 @@ const THERAPIES = [
       'Verlaufskontrolle möglich'
     ],
     indication: ['Erschöpfung', 'Mangelzustände', 'Sport', 'Schwangerschaft'],
+    tags: ['naehrstoffe', 'erschoepfung', 'vitamine', 'mineralstoffe', 'mangel', 'sport'],
     link: 'https://munichhealthcenter.de/leistungen/mikronaehrstoffe/'
   },
   {
@@ -233,6 +247,7 @@ const THERAPIES = [
       'Langfristige Verhaltensänderung'
     ],
     indication: ['Burnout', 'Stressmanagement', 'Lifestyle', 'Schlaf', 'Gewicht'],
+    tags: ['coaching', 'burnout', 'stress', 'lifestyle', 'schlaf', 'gewicht', 'ernaehrung'],
     link: 'https://munichhealthcenter.de/leistungen/gesundheitscoaching/'
   },
 
@@ -250,6 +265,7 @@ const THERAPIES = [
       'Erfahrene Spezialisten'
     ],
     indication: ['Komplexe Krankheitsbilder', 'Zweitmeinung', 'Diagnostik-Bedarf'],
+    tags: ['arzt', 'diagnostik', 'funktionell', 'regenerativ', 'zweitmeinung'],
     link: 'https://munichhealthcenter.de/ausstattung/aerztliche-leistungen/'
   },
   {
@@ -265,6 +281,7 @@ const THERAPIES = [
       'Basis für Epigenetik-Coaching'
     ],
     indication: ['Personalisierte Medizin', 'Prävention', 'Familiäre Risiken'],
+    tags: ['genetik', 'praevention', 'personalisiert', 'risiko', 'ernaehrung', 'medikamente'],
     link: 'https://munichhealthcenter.de/ausstattung/genanalysen/'
   },
   {
@@ -280,6 +297,7 @@ const THERAPIES = [
       'Erkenntnisse für Stress-Mustern'
     ],
     indication: ['Coaching', 'Karriereentwicklung', 'Stressbewältigung', 'Teams'],
+    tags: ['coaching', 'karriere', 'stress', 'persoenlichkeit', 'team'],
     link: 'https://munichhealthcenter.de/ausstattung/melanie-schwarz/'
   },
   {
@@ -295,6 +313,7 @@ const THERAPIES = [
       'Synergetisch zu Genanalysen'
     ],
     indication: ['Anti-Aging', 'Prävention', 'Lifestyle-Optimierung'],
+    tags: ['epigenetik', 'anti-aging', 'praevention', 'lifestyle', 'longevity'],
     link: 'https://munichhealthcenter.de/ausstattung/epigenetik-coach/'
   },
   {
@@ -310,6 +329,7 @@ const THERAPIES = [
       'Synergien sinnvoll kombiniert'
     ],
     indication: ['Mangelzustände', 'Chronische Erschöpfung', 'Sport', 'Detox'],
+    tags: ['naehrstoffe', 'erschoepfung', 'sport', 'detox', 'vitamine', 'mineralstoffe'],
     link: 'https://munichhealthcenter.de/ausstattung/mikronaehrstoff-coach/'
   },
 
@@ -327,6 +347,7 @@ const THERAPIES = [
       'Verfahren wird ausschließlich von spezialisierten Zentren angeboten'
     ],
     indication: ['Schwermetallbelastung', 'Chronische Entzündungen', 'CFS/ME', 'Umweltkrankheiten', 'Long Covid'],
+    tags: ['detox', 'schwermetall', 'entzuendung', 'long-covid', 'umweltgifte', 'blutreinigung', 'chronisch'],
     note: 'INUSpherese® wird nicht im Munich Health Center angeboten – Verfahren der INUS Medical Center GmbH (Alzenau).',
     link: 'https://www.inus.de/'
   }
