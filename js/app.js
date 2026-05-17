@@ -647,7 +647,34 @@ Halte dich kurz, fokussiert auf Biohacking-Prinzipien. Keine Heilversprechen. Sc
         .slice(0, 6)
         .map(o => o.t);
 
-      return { supplements: sortedSupps, tips: sortedTips };
+      // Match therapies by tags and indication
+      const sortedTherapies = (typeof THERAPIES !== 'undefined' ? THERAPIES : [])
+        .map(th => {
+          let sc = 0;
+          for (const t of (th.tags || [])) {
+            if (tagHits[t]) sc += tagHits[t] * 2;
+          }
+          const indNorm = (th.indication || []).map(i => normalizeStr(i));
+          for (const ind of indNorm) {
+            for (const w of words) {
+              if (ind.includes(w) && w.length > 2) sc += 2;
+            }
+            for (const [tag, hits] of Object.entries(tagHits)) {
+              if (ind.includes(tag)) sc += hits;
+            }
+          }
+          const blob = normalizeStr([th.name, th.short, (th.indication || []).join(' ')].join(' '));
+          for (const w of words) {
+            if (blob.includes(w) && w.length > 3) sc += 1;
+          }
+          return { th, sc };
+        })
+        .filter(o => o.sc > 0)
+        .sort((a, b) => b.sc - a.sc)
+        .slice(0, 4)
+        .map(o => o.th);
+
+      return { supplements: sortedSupps, tips: sortedTips, therapies: sortedTherapies };
     }
   }
 
@@ -963,20 +990,24 @@ Gib 6–10 Einträge. URLs müssen zur Originalquelle führen. Keine ausgedachte
       const note = t.note ? `<p class="therapie-note">ℹ ${escapeHtml(t.note)}</p>` : '';
       const externBadge = t.category === 'Extern' ? '<span class="therapie-extern">Extern</span>' : '';
       const ctaText = t.category === 'Extern' ? 'Mehr bei INUS →' : 'Mehr bei MHC →';
+      const shortPreview = (t.short || '').length > 80 ? (t.short || '').slice(0, 80) + '…' : (t.short || '');
       return `
-        <article class="therapie-card therapie-card--${escapeHtml(t.category.toLowerCase())}">
-          <div class="therapie-head">
+        <article class="therapie-card therapie-card--${escapeHtml(t.category.toLowerCase())}" data-tid="${escapeHtml(t.id)}">
+          <div class="therapie-card-header" onclick="this.parentElement.classList.toggle('open')">
             <div class="therapie-emoji">${escapeHtml(t.emoji || '🧬')}</div>
-            <div class="therapie-title">
+            <div class="therapie-header-info">
               <h3>${escapeHtml(t.name)} ${externBadge}</h3>
-              <div class="therapie-cat">${escapeHtml(t.category)}</div>
+              <p class="therapie-short-preview">${escapeHtml(shortPreview)}</p>
             </div>
+            <span class="therapie-chevron" aria-hidden="true">▸</span>
           </div>
-          <p class="therapie-short">${escapeHtml(t.short || '')}</p>
-          ${benefits ? `<div class="therapie-benefits"><strong>Wirkung & Nutzen</strong><ul>${benefits}</ul></div>` : ''}
-          ${indicationTags ? `<div class="therapie-indications">${indicationTags}</div>` : ''}
-          ${note}
-          <a class="therapie-cta" href="${escapeHtml(t.link)}" target="_blank" rel="noopener">${ctaText}</a>
+          <div class="therapie-card-body">
+            <p class="therapie-short">${escapeHtml(t.short || '')}</p>
+            ${benefits ? `<div class="therapie-benefits"><strong>Wirkung & Nutzen</strong><ul>${benefits}</ul></div>` : ''}
+            ${indicationTags ? `<div class="therapie-indications">${indicationTags}</div>` : ''}
+            ${note}
+            <a class="therapie-cta" href="${escapeHtml(t.link)}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${ctaText}</a>
+          </div>
         </article>
       `;
     }).join('');
