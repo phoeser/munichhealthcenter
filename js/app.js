@@ -509,38 +509,8 @@ Kein medizinischer Rat – erwähne am Ende, dass bei Beschwerden eine Fachperso
       const local = localRecommend(q);
 
       let html = '';
-      html += `<div class="results-head"><h3>Empfehlung für: „${escapeHtml(q)}“</h3></div>`;
-
-      // 1. Therapien im MHC — zuerst anzeigen
-      if (local.therapies && local.therapies.length) {
-        html += `<div class="results-section"><h4>🏥 Mögliche Behandlungen im Munich Health Center</h4><div class="therapie-grid">` +
-          local.therapies.map(t => {
-            const externBadge = t.category === 'Extern' ? '<span class="therapie-extern">Extern</span>' : '';
-            const ctaText = t.category === 'Extern' ? 'Mehr bei INUS →' : 'Mehr bei MHC →';
-            const benefits = (t.benefits || []).slice(0, 3).map(b => `<li>${escapeHtml(b)}</li>`).join('');
-            const shortPreview = (t.short || '').length > 80 ? (t.short || '').slice(0, 80) + '…' : (t.short || '');
-            return `
-              <article class="therapie-card therapie-card--${escapeHtml(t.category.toLowerCase())}" data-tid="${escapeHtml(t.id)}">
-                <div class="therapie-card-header" onclick="this.parentElement.classList.toggle('open')">
-                  <div class="therapie-emoji">${escapeHtml(t.emoji || '🧬')}</div>
-                  <div class="therapie-header-info">
-                    <h3>${escapeHtml(t.name)} ${externBadge}</h3>
-                    <p class="therapie-short-preview">${escapeHtml(shortPreview)}</p>
-                  </div>
-                  <span class="therapie-chevron" aria-hidden="true">▸</span>
-                </div>
-                <div class="therapie-card-body">
-                  <p class="therapie-short">${escapeHtml(t.short || '')}</p>
-                  ${benefits ? '<div class="therapie-benefits"><strong>Wirkung & Nutzen</strong><ul>' + benefits + '</ul></div>' : ''}
-                  <a class="therapie-cta" href="${escapeHtml(t.link)}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${ctaText}</a>
-                </div>
-              </article>
-            `;
-          }).join('') + `</div></div>`;
-      }
-
-      // 2. Supplements
-      html += `<div class="results-section"><h4>💊 Passende Supplements</h4>`;
+      html += `<div class="results-head"><h3>Empfehlung für: „${escapeHtml(q)}"</h3></div>`;
+      html += `<div class="results-section"><h4>💊 Passende Supplements (aus der DB)</h4>`;
       if (local.supplements.length) {
         html += `<div class="supplement-grid">` + local.supplements.map(s => `
           <article class="supp-card">
@@ -558,7 +528,6 @@ Kein medizinischer Rat – erwähne am Ende, dass bei Beschwerden eine Fachperso
       }
       html += `</div>`;
 
-      // 3. Biohacking-Tipps
       if (local.tips.length) {
         html += `<div class="results-section"><h4>🧠 Passende Biohacking-Tipps</h4><div class="tips-grid">` +
           local.tips.map(t => `
@@ -572,7 +541,6 @@ Kein medizinischer Rat – erwähne am Ende, dass bei Beschwerden eine Fachperso
           `).join('') + `</div></div>`;
       }
 
-      // 4. KI-Einschätzung
       html += `<div class="results-section ai-section">
         <div class="ai-section-head">
           <h4>🤖 KI-Einschätzung</h4>
