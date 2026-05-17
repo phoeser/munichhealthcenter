@@ -300,7 +300,7 @@ const SUPPLEMENTS = [
     synergies: ['vitamin-d3', 'vitamin-e', 'astaxanthin'],
     avoid: [],
     evidence: 'hoch',
-    sources: 'Fetter Fisch (Lachs, Sardinen, Makrele), Algenöl (vegan)'
+    sources: 'Fetter Fisch (Lachs, Sardinen, Makrele), Algenöl (vegan). Über MHC beziehbar: MitoCare Premium Natural Omega 3 Öl'
   },
   {
     id: 'mct-oel',
@@ -1716,6 +1716,152 @@ const SUPPLEMENTS = [
     avoid: [],
     evidence: 'mittel',
     sources: 'Schalen von Krustentieren (Extraktion), kleine Mengen in Knochenbrühe.'
+  },
+
+  // ============ MITOCARE (über MHC beziehbar) ============
+  {
+    id: 'mito-formula-sport',
+    name: 'Mitochondrien Formula Sport',
+    altNames: 'MitoCare Mito Sport',
+    category: 'Longevity',
+    tags: ['mitochondrien', 'energie', 'sport', 'leistung', 'regeneration', 'coq10'],
+    short: 'Komplexpräparat für Mitochondrien-Power bei Sportlern – Vitamine, Mineralstoffe, Aminosäuren & Pflanzenstoffe.',
+    description: 'Speziell für sportlich Aktive formuliert. Unterstützt Energiestoffwechsel und Mitochondrien-Funktion mit B-Vitaminen, CoQ10, Aminosäuren und Pflanzenstoffen.',
+    benefits: [
+      'Unterstützt zelluläre Energieproduktion',
+      'Komplexpräparat statt Einzelsupplements',
+      'Abgestimmt auf sportliche Belastung',
+      'Kölner-Liste-zertifiziert (Doping-sicher)'
+    ],
+    risks: ['Bei Medikamenteneinnahme: Arzt fragen'],
+    dosage: 'Laut Herstellerempfehlung (meist 2×2 Kapseln täglich).',
+    intake: 'Zu einer Mahlzeit mit etwas Fett.',
+    synergies: ['omega-3', 'magnesium'],
+    avoid: [],
+    evidence: 'mittel',
+    sources: 'Über MHC beziehbar · mitocare.de',
+    mitocare: true,
+    link: 'https://mitocare.de/products/mitochondrien-formula-sport'
+  },
+  {
+    id: 'mito-pqq-total',
+    name: 'PQQ Total',
+    altNames: 'MitoCare PQQ + CoQ10',
+    category: 'Longevity',
+    tags: ['mitochondrien', 'longevity', 'anti-aging', 'gehirn', 'energie', 'pqq'],
+    short: 'PQQ fördert die Neubildung von Mitochondrien (Biogenese) – kombiniert mit Vitamin B6, CoQ10 und PQQ.',
+    description: 'Pyrrolochinolinchinon (PQQ) ist ein Cofaktor, der die mitochondriale Biogenese stimuliert. In Kombination mit CoQ10 entsteht ein synergistischer Effekt auf die zelluläre Energieproduktion.',
+    benefits: [
+      'Stimuliert Mitochondrien-Neubildung',
+      'Neuroprotektive Eigenschaften',
+      'Synergistisch mit CoQ10',
+      'Unterstützt kognitive Leistung'
+    ],
+    risks: ['Wenig Langzeitdaten bei Hochdosierung'],
+    dosage: 'Laut Herstellerempfehlung.',
+    intake: 'Morgens zu einer Mahlzeit.',
+    synergies: ['coq10', 'magnesium', 'omega-3'],
+    avoid: [],
+    evidence: 'mittel',
+    sources: 'Über MHC beziehbar · mitocare.de',
+    mitocare: true,
+    link: 'https://mitocare.de/products/pqq-total'
+  },
+  {
+    id: 'mito-curcumin-booster',
+    name: 'LIPO Curcumin Booster',
+    altNames: 'MitoCare Curcumin flüssig',
+    category: 'Antioxidant',
+    tags: ['entzuendung', 'gelenke', 'antioxidans', 'curcumin', 'verdauung', 'leber'],
+    short: 'Liposomales Curcumin mit CoQ10 und Phospholipiden – deutlich höhere Bioverfügbarkeit als Kapseln.',
+    description: 'Curcumin ist schwer bioverfügbar. Die liposomale Formulierung umgeht dieses Problem. Enthält zusätzlich Vitamin C und CoQ10 für antioxidativen Schutz.',
+    benefits: [
+      'Entzündungshemmend (NF-κB Pathway)',
+      'Hohe Bioverfügbarkeit durch Liposomen',
+      'Antioxidativer Schutz',
+      'Unterstützt Gelenkgesundheit'
+    ],
+    risks: ['Bei Gallensteinen: Arzt fragen', 'Kann Blutverdünner verstärken'],
+    dosage: 'Laut Herstellerempfehlung (flüssig, abgemessen).',
+    intake: 'Direkt oder in Wasser gelöst, zu einer Mahlzeit.',
+    synergies: ['omega-3', 'vitamin-d3'],
+    avoid: [],
+    evidence: 'hoch',
+    sources: 'Über MHC beziehbar · mitocare.de',
+    mitocare: true,
+    link: 'https://mitocare.de/products/lipo-curcumin-booster'
+  },
+  {
+    id: 'mito-polyphenol-komplex',
+    name: 'Polyphenol Komplex',
+    altNames: 'MitoCare Polyphenole',
+    category: 'Antioxidant',
+    tags: ['antioxidans', 'longevity', 'herz', 'entzuendung', 'gefaesse', 'anti-aging'],
+    short: 'Breitband-Polyphenole aus OPC, Quercetin und Pflanzenstoffen – zellschützend und entzündungshemmend.',
+    description: 'Polyphenole sind sekundäre Pflanzenstoffe mit starker antioxidativer Wirkung. Der Komplex enthält Vitamin C, Molybdän und verschiedene Pflanzenextrakte.',
+    benefits: [
+      'Starker antioxidativer Schutz',
+      'Unterstützt Gefäßgesundheit',
+      'Senkt oxidativen Stress',
+      'Synergistisch mit Vitamin C'
+    ],
+    risks: ['Bei Eisenmangel: Polyphenole können Eisenaufnahme hemmen'],
+    dosage: 'Laut Herstellerempfehlung.',
+    intake: 'Zwischen den Mahlzeiten für optimale Aufnahme.',
+    synergies: ['vitamin-c', 'omega-3', 'resveratrol'],
+    avoid: ['eisen'],
+    evidence: 'hoch',
+    sources: 'Über MHC beziehbar · mitocare.de',
+    mitocare: true,
+    link: 'https://mitocare.de/products/polyphenol-komplex'
+  },
+  {
+    id: 'mito-adek-vitamin-oel',
+    name: 'ADEK Vitamin Öl',
+    altNames: 'MitoCare Vitamin A/D/E/K',
+    category: 'Vitamin',
+    tags: ['vitamin-d', 'vitamin-k2', 'knochen', 'immunsystem', 'haut', 'augen'],
+    short: 'Fettlösliche Vitamine A, D3, E und K2 in einem Tropfenöl – optimal bioverfügbar.',
+    description: 'Die vier fettlöslichen Vitamine in einem Öl vereint. Besonders sinnvoll, da D3 und K2 synergetisch wirken und zusammen eingenommen werden sollten.',
+    benefits: [
+      'Alle fettlöslichen Vitamine in einem Produkt',
+      'D3+K2 Synergie für Knochen & Kalziumstoffwechsel',
+      'Vitamin A für Augen und Immunsystem',
+      'Vitamin E als Antioxidans'
+    ],
+    risks: ['Vitamin A nicht überdosieren (teratogen)', 'Blutverdünner: Vitamin K ggf. kontraindiziert'],
+    dosage: 'Laut Herstellerempfehlung (Tropfen).',
+    intake: 'Zu einer fetthaltigen Mahlzeit.',
+    synergies: ['magnesium', 'omega-3'],
+    avoid: [],
+    evidence: 'hoch',
+    sources: 'Über MHC beziehbar · mitocare.de',
+    mitocare: true,
+    link: 'https://mitocare.de/products/adek-vitamin-oel'
+  },
+  {
+    id: 'mito-premium-minerale',
+    name: 'Premium Minerale',
+    altNames: 'MitoCare Mineralkomplex',
+    category: 'Mineral',
+    tags: ['mineralstoffe', 'magnesium', 'zink', 'selen', 'knochen', 'immunsystem', 'elektrolyte'],
+    short: '13 Mineralstoffe und Pflanzenstoffe in einem Komplex – für eine breite Grundversorgung.',
+    description: 'Breit formulierter Mineralkomplex mit 13 Mineralstoffen und Spurenelementen. Deckt die Grundversorgung ab und eignet sich als Basis-Supplement.',
+    benefits: [
+      'Breite Mineralstoff-Grundversorgung',
+      'Enthält Zink, Selen, Chrom, Mangan u.v.m.',
+      'Pflanzenstoffe für bessere Aufnahme',
+      'Kölner-Liste-zertifiziert'
+    ],
+    risks: ['Bei Niereninsuffizienz: Arzt fragen'],
+    dosage: 'Laut Herstellerempfehlung.',
+    intake: 'Zu einer Mahlzeit.',
+    synergies: ['vitamin-d3', 'omega-3'],
+    avoid: [],
+    evidence: 'hoch',
+    sources: 'Über MHC beziehbar · mitocare.de',
+    mitocare: true,
+    link: 'https://mitocare.de/products/premium-minerale'
   }
 ];
 
