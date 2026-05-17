@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="92" fill="#066489"/>
-  <rect x="224" y="78" width="64" height="300" rx="14" fill="#fff"/>
-  <rect x="108" y="194" width="296" height="64" rx="14" fill="#fff"/>
-  <polyline points="108,256 185,256 215,156 240,256 270,356 300,206 330,256 404,256" 
-    fill="none" stroke="#d38c36" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="256" y="430" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="56">MHC</text>
+  <text x="110" y="300" fill="#ffffffb3" font-family="system-ui,sans-serif" font-size="160" font-weight="400">M</text>
+  <text x="205" y="305" fill="#ffffff" font-family="system-ui,sans-serif" font-size="175" font-weight="700">H</text>
+  <text x="330" y="300" fill="#ffffffb3" font-family="system-ui,sans-serif" font-size="160" font-weight="400">C</text>
+  <rect x="200" y="320" width="120" height="8" rx="4" fill="#d38c36"/>
 </svg>
